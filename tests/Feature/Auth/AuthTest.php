@@ -59,6 +59,8 @@ it('throttles after 5 failed logins', function () {
 });
 
 it('slows guessing across many IPs without locking the real owner out of their own device', function () {
+    // the first lock-out lasts 1 second; a frozen clock keeps slow CI runners from outliving it
+    $this->freezeTime();
     config(['accounts.login.delay_after' => 3, 'accounts.login.max_delay' => 60]);
     $owner = User::factory()->create(['email' => 'owner@example.com']);
     $other = User::factory()->create(['email' => 'other@example.com']);

@@ -133,6 +133,8 @@ it('deletes the user database sessions on reset when the database session driver
 });
 
 it('kills the known-device cookie and clears the login lock-out on a password reset', function () {
+    // the first lock-out lasts 1 second; a frozen clock keeps slow CI runners from outliving it
+    $this->freezeTime();
     config(['accounts.login.delay_after' => 2]);
     $user = User::factory()->create(['email' => 'dev@example.com']);
     $device = loginFrom($this, '10.0.0.1', 'dev@example.com', 'password')->assertOk()->getCookie('known_device', false)->getValue();
