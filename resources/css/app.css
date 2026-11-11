@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@plugin "tailwindcss-primeui";
+
+@custom-variant dark (&:where(.app-dark, .app-dark *));
+
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    @apply bg-surface-50 text-surface-900 dark:bg-surface-950 dark:text-surface-0;
+}

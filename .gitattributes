@@ -1,0 +1,17 @@
+# (storage/ keeps only its tracked .gitignore placeholders, which a fresh install needs, so it is not ignored here.)
+# Files left out of `git archive` / the packaged kit zip. Tests and docs ARE shipped (the tests are part of the product).
+/.env                 export-ignore
+/.env.backup          export-ignore
+/.env.production      export-ignore
+/vendor               export-ignore
+/node_modules         export-ignore
+/public/build         export-ignore
+/public/hot           export-ignore
+/storage/*.key        export-ignore
+/bootstrap/cache/*    export-ignore
+/database/*.sqlite    export-ignore
+/.phpunit.cache       export-ignore
+/.phpunit.result.cache export-ignore
+/.idea                export-ignore
+/.vscode              export-ignore
+*.log                 export-ignore

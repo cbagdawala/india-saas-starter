@@ -1,0 +1,347 @@
+{
+ "description": "Official GST state/UT codes (first two GSTIN digits). retired=true codes are not issued any more but appear in historical GSTINs: 25 Daman and Diu (merged into 26 in 2020), 28 Andhra Pradesh before the 2014 split (replaced by 37). name_lookups: normalisation ignores case, spacing, punctuation and treats & as 'and'; retired codes are never returned by name (Daman and Diu and Dadra and Nagar Haveli both give 26). null = no match. Non-ASCII letters are not folded: any non-ASCII character is dropped from the key like punctuation, so 'Pondich\u00e9ry' becomes PONDICHRY and does not match (null).",
+ "states": [
+  {
+   "code": 1,
+   "name": "Jammu and Kashmir",
+   "retired": false
+  },
+  {
+   "code": 2,
+   "name": "Himachal Pradesh",
+   "retired": false
+  },
+  {
+   "code": 3,
+   "name": "Punjab",
+   "retired": false
+  },
+  {
+   "code": 4,
+   "name": "Chandigarh",
+   "retired": false
+  },
+  {
+   "code": 5,
+   "name": "Uttarakhand",
+   "retired": false
+  },
+  {
+   "code": 6,
+   "name": "Haryana",
+   "retired": false
+  },
+  {
+   "code": 7,
+   "name": "Delhi",
+   "retired": false
+  },
+  {
+   "code": 8,
+   "name": "Rajasthan",
+   "retired": false
+  },
+  {
+   "code": 9,
+   "name": "Uttar Pradesh",
+   "retired": false
+  },
+  {
+   "code": 10,
+   "name": "Bihar",
+   "retired": false
+  },
+  {
+   "code": 11,
+   "name": "Sikkim",
+   "retired": false
+  },
+  {
+   "code": 12,
+   "name": "Arunachal Pradesh",
+   "retired": false
+  },
+  {
+   "code": 13,
+   "name": "Nagaland",
+   "retired": false
+  },
+  {
+   "code": 14,
+   "name": "Manipur",
+   "retired": false
+  },
+  {
+   "code": 15,
+   "name": "Mizoram",
+   "retired": false
+  },
+  {
+   "code": 16,
+   "name": "Tripura",
+   "retired": false
+  },
+  {
+   "code": 17,
+   "name": "Meghalaya",
+   "retired": false
+  },
+  {
+   "code": 18,
+   "name": "Assam",
+   "retired": false
+  },
+  {
+   "code": 19,
+   "name": "West Bengal",
+   "retired": false
+  },
+  {
+   "code": 20,
+   "name": "Jharkhand",
+   "retired": false
+  },
+  {
+   "code": 21,
+   "name": "Odisha",
+   "retired": false
+  },
+  {
+   "code": 22,
+   "name": "Chhattisgarh",
+   "retired": false
+  },
+  {
+   "code": 23,
+   "name": "Madhya Pradesh",
+   "retired": false
+  },
+  {
+   "code": 24,
+   "name": "Gujarat",
+   "retired": false
+  },
+  {
+   "code": 25,
+   "name": "Daman and Diu",
+   "retired": true
+  },
+  {
+   "code": 26,
+   "name": "Dadra and Nagar Haveli and Daman and Diu",
+   "retired": false
+  },
+  {
+   "code": 27,
+   "name": "Maharashtra",
+   "retired": false
+  },
+  {
+   "code": 28,
+   "name": "Andhra Pradesh (before 2014 split)",
+   "retired": true
+  },
+  {
+   "code": 29,
+   "name": "Karnataka",
+   "retired": false
+  },
+  {
+   "code": 30,
+   "name": "Goa",
+   "retired": false
+  },
+  {
+   "code": 31,
+   "name": "Lakshadweep",
+   "retired": false
+  },
+  {
+   "code": 32,
+   "name": "Kerala",
+   "retired": false
+  },
+  {
+   "code": 33,
+   "name": "Tamil Nadu",
+   "retired": false
+  },
+  {
+   "code": 34,
+   "name": "Puducherry",
+   "retired": false
+  },
+  {
+   "code": 35,
+   "name": "Andaman and Nicobar Islands",
+   "retired": false
+  },
+  {
+   "code": 36,
+   "name": "Telangana",
+   "retired": false
+  },
+  {
+   "code": 37,
+   "name": "Andhra Pradesh",
+   "retired": false
+  },
+  {
+   "code": 38,
+   "name": "Ladakh",
+   "retired": false
+  },
+  {
+   "code": 97,
+   "name": "Other Territory",
+   "retired": false
+  },
+  {
+   "code": 99,
+   "name": "Centre Jurisdiction",
+   "retired": false
+  }
+ ],
+ "name_lookups": [
+  {
+   "name": "Maharashtra",
+   "code": 27
+  },
+  {
+   "name": "MAHARASHTRA",
+   "code": 27
+  },
+  {
+   "name": "  tamil   nadu ",
+   "code": 33
+  },
+  {
+   "name": "JAMMU & KASHMIR",
+   "code": 1
+  },
+  {
+   "name": "Jammu and Kashmir",
+   "code": 1
+  },
+  {
+   "name": "ORISSA",
+   "code": 21
+  },
+  {
+   "name": "Odisha",
+   "code": 21
+  },
+  {
+   "name": "DADRA & NAGAR HAVELI",
+   "code": 26
+  },
+  {
+   "name": "DAMAN & DIU",
+   "code": 26
+  },
+  {
+   "name": "Dadra and Nagar Haveli and Daman and Diu",
+   "code": 26
+  },
+  {
+   "name": "ANDAMAN & NICOBAR ISLANDS",
+   "code": 35
+  },
+  {
+   "name": "Pondicherry",
+   "code": 34
+  },
+  {
+   "name": "Puducherry",
+   "code": 34
+  },
+  {
+   "name": "NCT OF DELHI",
+   "code": 7
+  },
+  {
+   "name": "Delhi",
+   "code": 7
+  },
+  {
+   "name": "UTTARANCHAL",
+   "code": 5
+  },
+  {
+   "name": "Uttarakhand",
+   "code": 5
+  },
+  {
+   "name": "CHATTISGARH",
+   "code": 22
+  },
+  {
+   "name": "Telangana",
+   "code": 36
+  },
+  {
+   "name": "Ladakh",
+   "code": 38
+  },
+  {
+   "name": "Andhra Pradesh",
+   "code": 37
+  },
+  {
+   "name": "Lakshadweep",
+   "code": 31
+  },
+  {
+   "name": "Atlantis",
+   "code": null
+  },
+  {
+   "name": "",
+   "code": null
+  },
+  {
+   "name": "  ",
+   "code": null
+  },
+  {
+   "name": "Other Territory",
+   "code": 97
+  },
+  {
+   "name": "Centre Jurisdiction",
+   "code": 99
+  },
+  {
+   "name": "CHHATTISGARH",
+   "code": 22
+  },
+  {
+   "name": "LAKSHDWEEP",
+   "code": 31
+  },
+  {
+   "name": "TELENGANA",
+   "code": 36
+  },
+  {
+   "name": "DNHDD",
+   "code": 26
+  },
+  {
+   "name": "ARUNANCHAL PRADESH",
+   "code": 12
+  },
+  {
+   "name": "ANDAMAN NICOBAR",
+   "code": 35
+  },
+  {
+   "name": "JAMMUKASHMIR",
+   "code": 1
+  },
+  {
+   "name": "Pondich\u00e9ry",
+   "code": null
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+/* Public pages (landing, blog): plain Tailwind, no PrimeVue theme variables. */
+@import 'tailwindcss';
+
+@source '../views';
+
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Rendered Markdown (blog articles) */
+.prose-article {
+    @apply text-lg leading-8 text-slate-700;
+}
+.prose-article h2 { @apply mt-10 mb-4 text-2xl font-semibold text-slate-900; }
+.prose-article h3 { @apply mt-8 mb-3 text-xl font-semibold text-slate-900; }
+.prose-article p { @apply my-5; }
+.prose-article a { @apply text-indigo-600 underline; }
+.prose-article ul { @apply my-5 list-disc pl-6; }
+.prose-article ol { @apply my-5 list-decimal pl-6; }
+.prose-article blockquote { @apply my-6 border-l-4 border-slate-200 pl-4 italic; }
+.prose-article code { @apply rounded bg-slate-100 px-1 py-0.5 text-base; }
+.prose-article pre { @apply my-6 overflow-x-auto rounded-lg bg-slate-900 p-4 text-sm text-slate-100; }
+.prose-article pre code { @apply bg-transparent p-0; }
+.prose-article table { @apply my-6 w-full text-left text-base; }
+.prose-article th, .prose-article td { @apply border-b border-slate-200 py-2 pr-4; }
+.prose-article img { @apply my-6 rounded-lg; }

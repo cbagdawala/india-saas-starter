@@ -1,0 +1,32 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "name": "india-saas-starter-kit",
+    "private": true,
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "typecheck": "vue-tsc --noEmit"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.0.0",
+        "@vitejs/plugin-vue": "^6.0.10",
+        "concurrently": "^10.0.3",
+        "laravel-vite-plugin": "^3.1",
+        "tailwindcss": "^4.0.0",
+        "tailwindcss-primeui": "^0.6.1",
+        "typescript": "^5.9.3",
+        "vite": "^8.0.0",
+        "vue-tsc": "^3.3.13"
+    },
+    "dependencies": {
+        "@primeuix/themes": "^2.0.3",
+        "axios": "^1.20.0",
+        "pinia": "^4.1.0",
+        "primeicons": "^8.0.2",
+        "primevue": "^4.5.5",
+        "vue": "^3.5.44",
+        "vue-router": "^5.4.0"
+    }
+}

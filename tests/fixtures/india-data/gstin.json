@@ -1,0 +1,251 @@
+{
+ "description": "GSTIN validation vectors. error kinds: length, invalid_character, invalid_state_code, invalid_pan, invalid_entity, invalid_z, checksum_mismatch. Checks run in this order and the first failing check is reported. Valid vectors other than 27AAPFU0939F1ZV have checksums computed with an independent Python implementation of the official algorithm. Retired state codes 25 and 28 are accepted.",
+ "cases": [
+  {
+   "input": "27AAPFU0939F1ZV",
+   "valid": true,
+   "state_code": 27,
+   "note": "widely published example (Maharashtra)"
+  },
+  {
+   "input": "07AAACN1234A1Z9",
+   "valid": true,
+   "state_code": 7,
+   "note": "Delhi"
+  },
+  {
+   "input": "29AABCT1332L1ZA",
+   "valid": true,
+   "state_code": 29,
+   "note": "Karnataka"
+  },
+  {
+   "input": "33AAACH7409R1Z8",
+   "valid": true,
+   "state_code": 33,
+   "note": "Tamil Nadu"
+  },
+  {
+   "input": "24AAACC1206D1ZM",
+   "valid": true,
+   "state_code": 24,
+   "note": "Gujarat"
+  },
+  {
+   "input": "26AAACD1234E1ZB",
+   "valid": true,
+   "state_code": 26,
+   "note": "merged DNH&DD (26)"
+  },
+  {
+   "input": "38AAACL1234F1ZW",
+   "valid": true,
+   "state_code": 38,
+   "note": "Ladakh (38)"
+  },
+  {
+   "input": "97AAACO1234G1ZN",
+   "valid": true,
+   "state_code": 97,
+   "note": "Other Territory (97)"
+  },
+  {
+   "input": "25AAACD5678H1ZJ",
+   "valid": true,
+   "state_code": 25,
+   "note": "retired Daman and Diu (25), accepted"
+  },
+  {
+   "input": "28AAACA9999J1ZV",
+   "valid": true,
+   "state_code": 28,
+   "note": "retired old Andhra Pradesh (28), accepted"
+  },
+  {
+   "input": "37AAACA1111K1Z6",
+   "valid": true,
+   "state_code": 37,
+   "note": "Andhra Pradesh (37)"
+  },
+  {
+   "input": "36AAACT2222L1ZH",
+   "valid": true,
+   "state_code": 36,
+   "note": "Telangana"
+  },
+  {
+   "input": "01AAACJ3333M1ZW",
+   "valid": true,
+   "state_code": 1,
+   "note": "Jammu and Kashmir"
+  },
+  {
+   "input": "27AAACB4444N9ZA",
+   "valid": true,
+   "state_code": 27,
+   "note": "entity char 9"
+  },
+  {
+   "input": "27AAACB4444N1ZI",
+   "valid": true,
+   "state_code": 27,
+   "note": "entity 1"
+  },
+  {
+   "input": "19AAACW5555P1ZK",
+   "valid": true,
+   "state_code": 19,
+   "note": "checksum computed; West Bengal"
+  },
+  {
+   "input": "27AAACB4444NAZ9",
+   "valid": true,
+   "state_code": 27,
+   "note": "entity letter A"
+  },
+  {
+   "input": "",
+   "valid": false,
+   "error": "length",
+   "note": "empty"
+  },
+  {
+   "input": "27AAPFU0939F1Z",
+   "valid": false,
+   "error": "length",
+   "note": "14 chars"
+  },
+  {
+   "input": "27AAPFU0939F1ZVX",
+   "valid": false,
+   "error": "length",
+   "note": "16 chars"
+  },
+  {
+   "input": "27aapfu0939f1zv",
+   "valid": false,
+   "error": "invalid_character",
+   "note": "lower case rejected, not normalised"
+  },
+  {
+   "input": " 27AAPFU0939F1Z",
+   "valid": false,
+   "error": "invalid_character",
+   "note": "leading space, 15 bytes"
+  },
+  {
+   "input": "27AAPFU0939F1Z-",
+   "valid": false,
+   "error": "invalid_character",
+   "note": "punctuation"
+  },
+  {
+   "input": "00AAPFU0939F1ZV",
+   "valid": false,
+   "error": "invalid_state_code",
+   "note": "state code 00"
+  },
+  {
+   "input": "39AAPFU0939F1ZV",
+   "valid": false,
+   "error": "invalid_state_code",
+   "note": "39 not assigned"
+  },
+  {
+   "input": "98AAPFU0939F1ZV",
+   "valid": false,
+   "error": "invalid_state_code",
+   "note": "98 not assigned"
+  },
+  {
+   "input": "A7AAPFU0939F1ZV",
+   "valid": false,
+   "error": "invalid_state_code",
+   "note": "non-digit state code"
+  },
+  {
+   "input": "27AAPF10939F1ZV",
+   "valid": false,
+   "error": "invalid_pan",
+   "note": "digit in letter block"
+  },
+  {
+   "input": "27AAPFUA939F1ZV",
+   "valid": false,
+   "error": "invalid_pan",
+   "note": "letter in digit block"
+  },
+  {
+   "input": "27AAPFU09391FZV",
+   "valid": false,
+   "error": "invalid_pan",
+   "note": "digit where PAN check letter must be"
+  },
+  {
+   "input": "270AAPFU0939FZV",
+   "valid": false,
+   "error": "invalid_pan",
+   "note": "state code shifted"
+  },
+  {
+   "input": "27AAPFU0939F0ZV",
+   "valid": false,
+   "error": "invalid_entity",
+   "note": "entity 0"
+  },
+  {
+   "input": "27AAPFU0939F1AV",
+   "valid": false,
+   "error": "invalid_z",
+   "note": "14th char not Z"
+  },
+  {
+   "input": "27AAPFU0939F1Z0",
+   "valid": false,
+   "error": "checksum_mismatch",
+   "note": "wrong checksum"
+  },
+  {
+   "input": "27AAPFU0939F1ZW",
+   "valid": false,
+   "error": "checksum_mismatch",
+   "note": "off by one checksum"
+  },
+  {
+   "input": "27AAPFU0939F1Z6",
+   "valid": false,
+   "error": "checksum_mismatch",
+   "note": "wrong digit checksum"
+  },
+  {
+   "input": "27APAFU0939F1ZV",
+   "valid": false,
+   "error": "checksum_mismatch",
+   "note": "swap of unequal adjacent chars (AP -> PA stays PAN-valid, caught by checksum)"
+  },
+  {
+   "input": "27AAACZ1078K1Z0",
+   "valid": true,
+   "state_code": 27,
+   "note": "check character is '0' (value 0)"
+  },
+  {
+   "input": "29AAGCB7383J1Z4",
+   "valid": true,
+   "state_code": 29,
+   "note": "published sample GSTIN"
+  },
+  {
+   "input": "27AAPFU0939F1Z\n",
+   "valid": false,
+   "error": "invalid_character",
+   "note": "15 bytes, trailing newline"
+  },
+  {
+   "input": "27AAPFU0939F1Zé",
+   "valid": false,
+   "error": "length",
+   "note": "non-ASCII: length is counted in UTF-8 bytes (16 here: the accented e is 2 bytes) so this is 'length' even though it has 15 characters; ports must count bytes"
+  }
+ ]
+}
